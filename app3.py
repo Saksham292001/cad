@@ -10,7 +10,7 @@ st.markdown(
 query_params = st.experimental_get_query_params()
 tabs = ["Movie Recommending System", "Project Detail", "Improvements"]
 if "tab" in query_params:
-    active_tab = query_params["tab"][]
+    active_tab = query_params["tab"]
     print(query_params)
 else:
     active_tab = "Home"
