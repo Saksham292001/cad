@@ -29,9 +29,7 @@ indices = pd.Series(movies.index, index=movies['title']).drop_duplicates()
 
 # fetching poster through api of tmdb site
 def fetch_poster(i):
-    data = (requests.get(
-        f"https://api.themoviedb.org/3/movie/{i}?api_key=0874a959adc0544d6ae5cccf55ef5951&language=en-US".format(
-            id))).json()
+    data = (requests.get(f"https://api.themoviedb.org/3/movie/{i}?api_key=0874a959adc0544d6ae5cccf55ef5951&language=en-US".format(id))).json()
 
     print(data)
     # print(data )   # The poster path is taken from the generated Json File, and then image is given as the output
